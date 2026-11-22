@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Water Relay</title><link rel="stylesheet" href="style.css">
+<main><header><h1>Water Relay</h1><p>Help a ward team group water-outage reports and prioritize field checks.</p></header><div class="grid"><section><h2>Report intake</h2>
+<form><label>Ward<select name="ward"><option>Ward 12</option><option>Ward 18</option><option>Ward 23</option></select></label>
+<label>Street or landmark<input name="street" maxlength="80" required></label>
+<label>Hours without supply<input name="hours" type="number" min="1" max="168" required></label>
+<label>Site type<select name="site"><option>Residential</option><option>School</option><option>Clinic</option></select></label>
+<button>Add report</button><button type="button" id="sample">Load sample reports</button></form><p class="notice">Demo data only. Changes are stored in this browser. Reports are grouped by ward and normalized street name.</p></section>
+<section><h2>Field queue</h2><p id="summary" aria-live="polite"></p><ol id="queue"></ol></section></div></main>
+<script type="module" src="app.mjs"></script></html>
